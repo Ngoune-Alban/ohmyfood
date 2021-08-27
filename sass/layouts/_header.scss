@@ -1,0 +1,10 @@
+.header {
+    padding: $default-component-padding;
+    font-size: 1.8rem;
+    text-align: center;
+    @media screen and (min-width: $breakpoint-tablet-min-width){
+        display: flex;
+        justify-content: start;
+       
+    }
+}
