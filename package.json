@@ -1,0 +1,14 @@
+{
+  "name": "ohmyfood",
+  "version": "1.0.0",
+  "description": "This is a restaurant reservation project",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded"
+  },
+  "keywords": [
+    "ohmyfood"
+  ],
+  "author": "Ngoune Alban",
+  "license": "MIT"
+}
