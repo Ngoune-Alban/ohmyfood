@@ -4,7 +4,8 @@
   "description": "This is a restaurant reservation project",
   "main": "index.html",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css --style expanded",
+    "prefix": "postcss style.css --use autoprefixer -d css/prefixed/"
   },
   "keywords": [
     "ohmyfood"

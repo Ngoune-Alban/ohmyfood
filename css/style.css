@@ -11,6 +11,27 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+  background: linear-gradient(#FF79DA, #9356DC);
+  padding: 1.2rem 1.8rem;
+  border-radius: 2rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.5);
+}
+.btn:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transition: background 2s ease-in;
+}
+
 .header {
   padding: 1rem;
   font-size: 1.8rem;
@@ -26,7 +47,7 @@ body {
 .footer {
   padding: 1rem;
   line-height: 1.4;
-  background-color: #818181;
+  background-color: #515151;
   color: white;
 }
 .footer__logo {
@@ -51,11 +72,166 @@ body {
   }
 }
 
-.home {
-  color: #9356DC;
+.home .place {
+  background: #e1e1e1;
+  color: rgba(0, 0, 0, 0.6);
 }
-.home .title {
-  color: #FF79DA;
+.home .place h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+.home .place h3 .fas {
+  padding-right: 0.5rem;
+}
+.home .explore {
+  text-align: center;
+  background: #f3f3f3;
+  padding: 1rem;
+}
+.home .explore h2 {
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+.home .explore p {
+  font-size: 1.4rem;
+}
+.home .operation {
+  padding: 1rem;
+}
+.home .operation .options {
+  padding: 1rem;
+}
+.home .operation .options .option {
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  border-radius: 1.5rem;
+  margin: 0 0 1.2rem;
+  padding: 1rem 0;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.16);
+}
+.home .operation .options .option:hover {
+  background: rgba(147, 86, 220, 0.16);
+}
+.home .operation .options .option:hover .fas {
+  color: #9356DC;
+  opacity: 1;
+  transition: 0.2s;
+}
+.home .operation .options .option .rond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin-left: -0.9rem;
+  background: #9356DC;
+  color: #ffffff;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+}
+.home .operation .options .option .fas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2.5rem;
+  opacity: 0.8;
+}
+.home .operation .options .option p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-left: 1.5rem;
+  opacity: 0.8;
+}
+.home .restaurant {
+  padding: 2rem 1rem;
+  background-color: #f3f3f3;
+}
+.home .restaurant .cards .card {
+  position: relative;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 1.5rem;
+}
+.home .restaurant .cards .card img {
+  object-fit: cover;
+  width: 100%;
+  height: 14rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+.home .restaurant .cards .card .new {
+  position: absolute;
+  top: 1.2rem;
+  right: 1rem;
+  color: #008868;
+  font-weight: bold;
+  background-color: #99E2D0;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.15rem;
+}
+.home .restaurant .cards .card .card-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+.home .restaurant .cards .card .card-footer .label h3 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.home .restaurant .cards .card .card-footer .label p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 300;
+}
+.home .restaurant .cards .card .card-footer .heart {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.home .restaurant .cards .card .card-footer .heart .empty {
+  display: block;
+}
+.home .restaurant .cards .card .card-footer .heart .full {
+  color: #9356DC;
+  display: none;
+}
+.home .restaurant .cards .card .card-footer .heart:active .empty {
+  display: none;
+}
+.home .restaurant .cards .card .card-footer .heart:active .full {
+  color: #9356DC;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .home .operation .options {
+    display: flex;
+    justify-content: space-between;
+  }
+  .home .operation .options .option {
+    width: 30%;
+  }
+  .home .restaurant .cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .home .restaurant .cards .card {
+    width: 45%;
+    margin: 1rem;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .home .restaurant .cards {
+    flex-wrap: nowrap;
+  }
+  .home .restaurant .cards .card {
+    width: 25%;
+    margin: 1rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

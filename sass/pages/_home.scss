@@ -1,6 +1,188 @@
 .home {
-  color: $color-primary;
-  .title {
-    color: $color-secondary;
+  .place {
+    background: $color-bg-place;
+    color: rgba($color: $color-black, $alpha: 0.6);
+        & h3 {
+            font-size: 1.2rem;
+            text-align: center;
+            padding: 1rem;
+            margin: 0;
+              & .fas {
+                    padding-right: 0.5rem;
+              }
+        }
   }
+  .explore {
+    text-align: center;
+    background: $color-bg-explore;
+    padding: 1rem;
+    & h2 {
+        font-weight: 800;
+        font-size: 1.6rem;
+    }
+    & p {
+        font-size: 1.4rem;
+    }
+  }
+  .operation {
+    padding: $default-component-padding;
+
+    & .options {
+      padding: 1rem;
+
+        & .option {
+            background: #f7f7f7;
+            display: flex;
+            align-items: center;
+            border-radius: 1.5rem;
+            margin: 0 0 1.2rem;
+            padding: 1rem 0;
+            box-shadow: 1px 3px 10px rgba($color-black, 0.16);
+            &:hover {
+              background: rgba($color-primary, 0.16);
+                .fas {
+                    color:$color-primary;
+                    opacity: 1;
+                    transition: .2s;
+                }              
+          }
+          & .rond {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              margin-left: -0.9rem;
+              background: $color-primary;
+              color: $color-white;
+              width: 1.8rem;
+              height: 1.8rem;
+              border-radius: 50%;
+          }
+
+          & .fas {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-left: 2.5rem;
+              opacity: 0.8;
+          }  
+          & p {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: bold;
+              margin-left: 1.5rem;
+              opacity: 0.8;
+            }
+        }  
+        
+    }    
+  }
+  .restaurant {
+    padding: 2rem $default-component-padding;
+    background-color: $color-bg-restaurant;
+    .cards {
+
+       .card {    
+        position: relative;  
+        box-shadow: 1px 3px 10px rgba($color-black, 0.16);
+        border-radius: 1.5rem;
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 14rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+        }
+        .new {
+          position: absolute;
+          top: 1.2rem;
+          right: 1rem;
+          color: $color-label-nouveau;
+          font-weight: bold;
+          background-color: $color-tertiare;
+          padding: .5rem .8rem;
+          border-radius: .15rem;
+        }
+        .card-footer {
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem;
+          margin-bottom: 1rem;
+          .label {
+            h3 {
+              font-size:1.3rem;
+              margin: 0;
+          }
+      
+          p {
+              font-size:1.2rem;
+              margin: 0;
+              font-weight: 300;
+          }
+          }
+          .heart {
+            cursor: pointer;
+            font-size:1.5rem;
+            .empty {
+              display: block;
+            }
+            .full {
+              color: $color-primary;
+              display: none;
+            }
+            &:active {
+              .empty {
+                display: none;
+              }
+              .full {
+                color: $color-primary;
+                display: block;
+              }
+            }
+          }
+          
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-min-width){
+  .home {
+    .operation {
+      .options{
+        display: flex;
+        justify-content: space-between;
+        .option{
+          width: 30%;
+        }
+      }
+    }
+    .restaurant {
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .card {
+          width: 45%;
+          margin: 1rem;
+        }
+      }
+    }
+
+  }
+}
+
+  @media screen and (min-width: $breakpoint-desktop-min-width){
+    .home{
+      .restaurant {
+        .cards {
+          flex-wrap: nowrap;
+          .card {
+            width: 25%;
+            margin: 1rem;
+          }
+        }
+      }
+    }
 }
