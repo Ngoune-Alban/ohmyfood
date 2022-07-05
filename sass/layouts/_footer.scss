@@ -1,22 +1,24 @@
 .footer {
     padding: $default-component-padding;
-    line-height: 1.4;
+    line-height: 1.6;
     background-color: $color-footer-background;
     color: white;
-    &__logo {
+    .logo {
       margin-bottom: 0.5rem;
+      font-size: 1.3rem;
     }
-    &__actions {
+    .actions {
         font-weight: 500;
         & i {
-            margin-right: 0.5rem;
+            margin-right: 0.7rem;
             font-size: 0.9rem;
+            width: 1rem;
         }
     }
     @media screen and (min-width: $breakpoint-tablet-min-width){
         display: flex;
         justify-content: space-between;
-        &__logo {
+        .logo {
             margin-bottom: 0;
             display: flex;
             align-items: center;

@@ -1,36 +1,37 @@
 .home {
   .place {
     background: $color-bg-place;
-    color: rgba($color: $color-black, $alpha: 0.6);
+    color: rgba($color: $color-black, $alpha: 0.7);
         & h3 {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
             text-align: center;
             padding: 1rem;
             margin: 0;
               & .fas {
-                    padding-right: 0.5rem;
+                    padding-right: 0.7rem;
               }
         }
   }
   .explore {
     text-align: center;
     background: $color-bg-explore;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
     & h2 {
         font-weight: 800;
         font-size: 1.6rem;
     }
     & p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        color: rgba($color: $color-black, $alpha: 0.7);
     }
   }
   .operation {
     padding: $default-component-padding;
 
-    & .options {
+     .options {
       padding: 1rem;
 
-        & .option {
+        .option {
             background: #f7f7f7;
             display: flex;
             align-items: center;
@@ -42,14 +43,11 @@
               background: rgba($color-primary, 0.16);
                 .fas {
                     color:$color-primary;
-                    opacity: 1;
                     transition: .2s;
                 }              
-          }
-          & .rond {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+            }
+            .rond {
+              @include center;
               position: absolute;
               margin-left: -0.9rem;
               background: $color-primary;
@@ -57,19 +55,14 @@
               width: 1.8rem;
               height: 1.8rem;
               border-radius: 50%;
-          }
+            }
 
-          & .fas {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+            i {
               margin-left: 2.5rem;
               opacity: 0.8;
+              color: rgba($color: $color-black, $alpha: 0.7);
           }  
-          & p {
-              display: flex;
-              align-items: center;
-              justify-content: center;
+           p {
               font-weight: bold;
               margin-left: 1.5rem;
               opacity: 0.8;
@@ -99,6 +92,7 @@
           right: 1rem;
           color: $color-label-nouveau;
           font-weight: bold;
+          font-size: 0.8rem;
           background-color: $color-tertiare;
           padding: .5rem .8rem;
           border-radius: .15rem;
