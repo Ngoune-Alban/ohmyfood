@@ -188,20 +188,24 @@ a {
 .home .restaurant .cards .card .card-footer .heart {
   cursor: pointer;
   font-size: 1.5rem;
-}
-.home .restaurant .cards .card .card-footer .heart .empty {
-  display: block;
+  position: relative;
 }
 .home .restaurant .cards .card .card-footer .heart .full {
-  color: #9356DC;
-  display: none;
+  position: absolute;
+  right: 0;
+  top: 1px;
+  transition: all 500ms;
+  opacity: 0;
+  background: -moz-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.home .restaurant .cards .card .card-footer .heart:active .empty {
-  display: none;
-}
-.home .restaurant .cards .card .card-footer .heart:active .full {
-  color: #9356DC;
-  display: block;
+.home .restaurant .cards .card .card-footer .heart .full:hover {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
