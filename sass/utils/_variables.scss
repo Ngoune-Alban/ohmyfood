@@ -8,6 +8,11 @@ $color-bg-place:#e1e1e1;
 $color-bg-explore:#f3f3f3;
 $color-bg-restaurant:#f3f3f3;
 $color-label-nouveau: #008868;
+$gradient-background: linear-gradient(
+  to top,
+  $color-primary,
+  $color-secondary
+);
 
 //add breakpoints
 $breakpoint-tablet-min-width: 768px;

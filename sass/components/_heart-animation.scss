@@ -1,0 +1,28 @@
+.heart-icon {
+    font-family: FontAwesome;
+    position: relative;
+    &::before {
+      content: "\f7a9";
+    //   font-weight: bold;
+      padding: 5px;
+    }
+    &:hover::before{
+        animation-name: heart;
+        animation-duration: 2s;
+        background: $gradient-background;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+  }
+
+
+  @keyframes heart {
+    from {
+        opacity: 0.4;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  

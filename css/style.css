@@ -32,6 +32,31 @@ a {
   transition: background 2s ease-in;
 }
 
+.heart-icon {
+  font-family: FontAwesome;
+  position: relative;
+}
+.heart-icon::before {
+  content: "\f7a9";
+  padding: 5px;
+}
+.heart-icon:hover::before {
+  animation-name: heart;
+  animation-duration: 2s;
+  background: linear-gradient(to top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes heart {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .header {
   padding: 1rem;
   font-size: 1.8rem;
@@ -200,7 +225,6 @@ a {
   background: -webkit-linear-gradient(top, #9356DC 0%, #FF79DA 100%);
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
