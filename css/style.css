@@ -56,16 +56,35 @@ a {
     opacity: 1;
   }
 }
-.header {
-  padding: 1rem;
-  font-size: 1.8rem;
-  text-align: center;
+.heart {
+  cursor: pointer;
+  font-size: 1.5rem;
+  position: relative;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    display: flex;
-    justify-content: start;
-  }
+.heart .full {
+  position: absolute;
+  right: 0;
+  top: 1px;
+  transition: all 500ms;
+  opacity: 0;
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart .full:hover {
+  opacity: 1;
+}
+
+header {
+  padding: 1rem;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+header a {
+  color: black;
 }
 
 .footer {
@@ -209,25 +228,6 @@ a {
   margin: 0;
   font-weight: 300;
 }
-.home .restaurant .cards .card .card-footer .heart {
-  cursor: pointer;
-  font-size: 1.5rem;
-  position: relative;
-}
-.home .restaurant .cards .card .card-footer .heart .full {
-  position: absolute;
-  right: 0;
-  top: 1px;
-  transition: all 500ms;
-  opacity: 0;
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.home .restaurant .cards .card .card-footer .heart .full:hover {
-  opacity: 1;
-}
 
 @media screen and (min-width: 768px) {
   .home .operation .options {
@@ -262,6 +262,7 @@ a {
   position: fixed;
   background-color: white;
   opacity: 0;
+  z-index: -1;
   animation: initial-animation 2100ms;
   display: flex;
   align-items: center;
@@ -322,6 +323,113 @@ a {
   100% {
     transform: rotate(360deg);
   }
+}
+.menu {
+  position: relative;
+}
+.menu img {
+  width: 100%;
+  object-fit: cover;
+  height: 400px;
+}
+.menu .menu-content {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 0 15px;
+  background-color: #f3f3f3;
+  width: 100%;
+  top: 300px;
+  border-radius: 40px 40px 0 0;
+}
+.menu .menu-content .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu .menu-content .menu-group .menu-title {
+  margin-bottom: 5px;
+}
+.menu .menu-content .menu-group hr {
+  border: 2px solid #99E2D0;
+  width: 35px;
+  margin: 0;
+}
+
+.menu-card {
+  box-shadow: 0px 4px 10px #cccccc;
+  margin: 20px 0 0 0;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+  animation: menu-item-position 1500ms forwards;
+  transition: all 500ms;
+}
+.menu-card:hover .menu-card__content .menu-card__price {
+  margin-right: 81px;
+}
+.menu-card:hover .menu-card__content .menu-card__title {
+  margin-right: 81px;
+}
+.menu-card:hover .menu-card__animation .menu-card__icon {
+  transform: translateX(0);
+}
+.menu-card:hover .menu-card__animation .menu-card__icon i {
+  transform: rotate(360deg);
+}
+.menu-card .menu-card__content {
+  width: 100%;
+}
+.menu-card .menu-card__content .menu-card__title {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: all 400ms;
+}
+.menu-card .menu-card__content .menu-card__description {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-card .menu-card__content .menu-card__description .menu-card__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu-card .menu-card__content .menu-card__price {
+  font-weight: bold;
+  transition: all 400ms ease-in-out;
+}
+.menu-card .menu-card__animation {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+}
+.menu-card .menu-card__animation .menu-card__icon {
+  transition: transform 400ms ease-in-out;
+  transform: translateX(81px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  border-radius: 0 20px 20px 0;
+  background-color: #99E2D0;
+}
+.menu-card .menu-card__animation .menu-card__icon i {
+  transition: transform 400ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  font-size: 22px;
+  color: #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */
